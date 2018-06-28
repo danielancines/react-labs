@@ -9,7 +9,7 @@ export default props => (
         <div>
             <Route path='/todos' component={Todo} />
             <Route path='/about' component={About} />
-            <Redirect from='*' to='/todos' />
+            <Route path='*' render={() => (<Redirect to="/todos" />)} />
         </div>
     </HashRouter>
 )
